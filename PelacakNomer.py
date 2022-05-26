@@ -2,7 +2,7 @@ from ast import operator
 from inspect import trace
 from tkinter import *
 from tokenize import String
-from turtle import heading
+from turtle import heading, position
 from unittest import result
 from numpy import number, size
 import phonenumbers
@@ -50,14 +50,11 @@ def track():
 # ==========================background=====================================
 bg = PhotoImage(file="background.png")
 my_canvas = Canvas(root, width=1366, height=768)
-my_canvas.pack(fill="both", expand=True)
+my_canvas.pack(fill="both", expand=True,)
 my_canvas.create_image(0, 0, anchor="nw", image=bg)
+#make background full screen
+my_canvas.config(width=root.winfo_screenwidth(), height=root.winfo_screenheight())
 
-
-
-#logo
-logo=PhotoImage(file="logo image.png")
-Label(root,image=logo).place(x=240,y=70)
 
 
 heading=Label(root,text="Pelacak Nomer",font=("Arial",15,"bold"),fg="blue")
@@ -76,9 +73,6 @@ search_image=PhotoImage(file="search.png")
 search=Button(image=search_image,borderwidth=0,cursor="hand2",bd=0,font=("arial",16),command=track)
 search.place(x=23,y=265)
 
-#bottom box
-Box=PhotoImage(file="bottom png.png")
-Label(root,image=Box).place(x=-2,y=380)
 
 country=Label(root,text="Country:",bg="#57adff",fg="black",font=("arial",10,"bold"))
 country.place(x=50,y=420)
