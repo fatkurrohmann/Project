@@ -1,10 +1,9 @@
-from ast import operator
+vfrom ast import operator
 from inspect import trace
 from tkinter import *
 from tokenize import String
 from turtle import heading, position
 from unittest import result
-from numpy import number, size
 import phonenumbers
 from phonenumbers import carrier
 from phonenumbers import geocoder
@@ -54,7 +53,7 @@ heading=Label(root,text="Pelacak Nomer",font=("Nunito",15,"bold"), fg='black')
 heading.place(x=400,y=40)
 
 #Entry
-Entry_back=PhotoImage(file="asset/search.png")
+Entry_back=PhotoImage(file="assets/search.png")
 Label(root, image=Entry_back).place(x=530,y=110)
 
 entry=StringVar()
@@ -62,7 +61,7 @@ enter_number=Entry(root,textvariable=entry,width=17,font=("Arial",20),justify="c
 enter_number.place(x=548,y=114)
 
 #button
-search_image=PhotoImage(file="asset/search.png")
+search_image=PhotoImage(file="assets/search.png")
 search=Button(image=search_image,borderwidth=0,cursor="hand2",bd=0,font=("arial",16),command=track)
 search.place(x=530,y=170)
 
